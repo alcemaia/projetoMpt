@@ -15,6 +15,7 @@ module.exports = {
         cremeClaro: {
           200: '#c3bfae'
         },
+        
         cremeEscuro: {
           400: '#A48E6C',
         },
