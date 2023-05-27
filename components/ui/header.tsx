@@ -23,7 +23,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/#propostas"
-                  className="font-medium text-vermelho-900 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  className="font-medium text-vermelho-900 hover:text-cremeEscuro-400 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Propostas
                 </Link>
@@ -31,7 +31,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/#Instagram"
-                  className="font-medium text-vermelho-900 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  className="font-medium text-vermelho-900 hover:text-cremeEscuro-400 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Instagram
                 </Link>
@@ -39,7 +39,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/#videos"
-                  className="font-medium text-vermelho-900 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  className="font-medium text-vermelho-900 hover:text-cremeEscuro-400 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Vídeos
                 </Link>
@@ -47,7 +47,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/d7b459d50991451c9d0c8d5752540f4c"
-                  className="btn-sm text-white bg-vermelho-900 hover:bg-purple-700 ml-3">
+                  className="btn-sm text-white bg-vermelho-900 hover:bg-cremeEscuro-400 ml-3">
                   DATA
                 </Link>
               </li>
