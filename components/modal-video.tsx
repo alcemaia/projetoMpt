@@ -85,8 +85,6 @@ export default function ModalVideo({
               </Dialog.Panel>
             </div>
           </Transition.Child>
-          {/* End: Modal dialog */}
-
         </Dialog>
       </Transition>
 

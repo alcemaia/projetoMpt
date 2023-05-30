@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero
-        title={'Ivan Zichtl, o candidato do momento'}
+        title={'Márcio Amazonas para um MPT de todos'}
         description={'Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.'}
         />
       <section key="propostas" id="propostas">

@@ -15,7 +15,7 @@ permalink: string
 caption: string
 }
 export interface InstagramPageProps{
-  title: string,
+  title: string
   description: string
 }
 export default function Instagram(props: InstagramPageProps) {
@@ -74,7 +74,6 @@ useEffect(()=> {
             <h2 className="h2 mb-4">{title}</h2>
             <p className="text-xl text-gray-400">{description}</p>
           </div>
-
           <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
             {instagramPosts?.map((card: any) => {
               console.log(instagramPosts)
@@ -86,7 +85,6 @@ useEffect(()=> {
                   />
               )
             })}
-            {/* {} */}
           </div>
         </div>
       </div>

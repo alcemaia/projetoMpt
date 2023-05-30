@@ -1,9 +1,10 @@
 "use client"; // This is a client component 👈🏽
 
-import Card from '@/components/card'
 import {useState, useEffect } from 'react';
-import { idText } from 'typescript';
-import { metadata } from '../app/(default)/page';
+import VideoCard from './videoCard';
+// import Card from '@/components/card'
+// import { idText } from 'typescript';
+// import { metadata } from '../app/(default)/page';
 
 export interface VgaPostProps { 
 id:string 
@@ -18,49 +19,59 @@ export interface VideosPageProps{
   title: string,
   description: string
 }
+
+const descriptions: Description[] = [
+  {
+    title: "Melhorias para o Servidor",
+    description: "Conheça propostas e iniciativas para promover melhores condições de trabalho, valorização profissional e benefícios para os servidores públicos."
+  },
+  {
+    title: "Programas de Capacitação",
+    description: "Saiba mais sobre programas de capacitação e desenvolvimento profissional para os servidores, incluindo oportunidades de treinamento e cursos específicos."
+  },
+  {
+    title: "Saúde e Qualidade de Vida",
+    description: "Descubra as ações voltadas para a saúde e qualidade de vida dos servidores, como programas de bem-estar, acesso a atividades físicas e políticas de prevenção de doenças ocupacionais."
+  },
+  {
+    title: "Infraestrutura e Tecnologia",
+    description: "Informe-se sobre projetos de melhoria da infraestrutura e tecnologia nas instituições públicas, visando proporcionar um ambiente de trabalho moderno e eficiente."
+  },
+  {
+    title: "Valorização do Servidor",
+    description: "Conheça propostas para a valorização do servidor público, abordando aspectos como planos de carreira, progressão salarial e reconhecimento de mérito."
+  },
+  {
+    title: "Direitos e Benefícios",
+    description: "Aprenda sobre os direitos e benefícios garantidos aos servidores públicos, como licenças, gratificações e benefícios previdenciários."
+  }
+];
+
+
 export default function Instagram(props: VideosPageProps) {
   const {title, description} = props
-  const accessToken = process.env.NEXT_PUBLIC_IG_TOKEN
-  const fields = 'media_url,media_type,permalink,id,caption'
-  const url = `https://graph.instagram.com/me/media?fields=${fields}&access_token=${accessToken}`
   const [instagramPosts, setInstagramPosts] = useState<any>([])
-  
+  // const handlerData = (data: any) => {
+  //   let arr = []
+  //   if(data !== undefined){
+  //     arr = data.items
+  //     arr.forEach((element) => {
+  //       console.log(element)
+  //     });
+  //   }
+
+  // }
 useEffect(()=> {
-  fetch(
-    url
-    )
-  .then(response => response.json())
-  .then(data => {
-    // Process the response data
-    if (data.data !== undefined) { 
-      const arr = data.data
-      const lastSix = arr.filter((post:any, index: number) => {
-        if(index <= 5) return true
-        return false
-      })
-      if(lastSix !== undefined) {
-        const postData: VgaPostProps = lastSix.map((post: any) => {
-          const returnPost: VgaPostProps = {
-            id: post.id, 
-            title: post.caption,
-            description: 'Está é a descrição da proposta, post do Instagram ou vídeo.', 
-            media_type: post.media_type,
-            media_url: post.media_url,
-            permalink: post.permalink,
-            caption: post.caption
-          }
-          return returnPost
-        } )
-        setInstagramPosts(postData)
-      }
-    }
-    console.log('');
-    // Handle or display the posts as needed
-  })
-  .catch(error => {
-    // Handle any errors that occurred during the request
-    console.error(error);
-  });
+  const handlerAsync = async () => {
+    const data = await fetch('http://localhost:3000/api/hello')
+    .then(response => response.json())
+    .then(data => data)
+    .catch(error => console.error(error))
+    console.log(data.data[0], '@@@')
+
+    setInstagramPosts(data.data)
+  }
+  handlerAsync().then((e)=>e).catch(err=>console.log(err))
 }, [])
 
   return (
@@ -76,12 +87,15 @@ useEffect(()=> {
 
           <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
             {instagramPosts?.map((card: any) => {
-              console.log(instagramPosts)
+              const randomIndex = Math.floor(Math.random() * instagramPosts.length);
+
+              console.log(instagramPosts, '@@@@@')
               return (
-                <Card
+                <VideoCard
                   title={card.title}
-                  description={card.description}
-                  img={card.media_url}
+                  description={descriptions[randomIndex].description}
+                  video_url={card.video_url}
+                  media_url={card.media_url}
                   />
               )
             })}

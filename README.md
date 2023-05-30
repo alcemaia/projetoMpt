@@ -1,3 +1,26 @@
+to do
+
+
+configurar as contas do usuário e seus tokens
+ajustar as cores do projeto
+ajustar o bg do projeto.
+ajusta o email do cliente
+
+finalizar hero
+finalizar instagram
+finalizar videos
+ajustar o menu
+inserir contado
+
+revisar as requests intagram
+revisar request yt
+revisar request contato
+
+
+
+
+
+
 # Free React / Next.js landing page template
 
 ![Open React / Next.js template preview](https://user-images.githubusercontent.com/2683512/231426532-c71f4291-4813-401b-a569-ada47fe13efa.png)
