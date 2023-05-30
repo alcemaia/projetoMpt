@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Ivan Zichtl',
+  title: 'Márcio Amazonas',
   description: 'Page description',
 }
 
@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <>
       <Hero
-        title={'Márcio Amazonas para um MPT de todos'}
-        description={'Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.'}
+        title={'Márcio Amazonas, candidato a PGT'}
+        description={'MPT DE TODAS E TODOS'}
         />
       <section key="propostas" id="propostas">
         <Zigzag

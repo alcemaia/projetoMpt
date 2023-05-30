@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         gray: {
           100: '#262668',
           200: '#262668',
@@ -68,7 +69,23 @@ module.exports = {
           700: '#771408',
           800: '#7d314d',
           900: '#6f1a39',
+=======
+        azulEscuro: {
+          900: '#373A4C',
         },
+
+        cremeClaro: {
+          200: '#c3bfae'
+        },
+        
+        cremeEscuro: {
+          400: '#A48E6C',
+>>>>>>> 77cf12efe6eb719e93a6fe735f1ea2636acc05c1
+        },
+
+        vermelho: {
+          900: '#771819'
+        }
       },
       spacing: {
         '9/16': '56.25%',
