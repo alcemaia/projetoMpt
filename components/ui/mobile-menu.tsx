@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
-
+  const staged = process.env.NEXT_PUBLIC_STG
   const trigger = useRef<HTMLButtonElement>(null)
   const mobileNav = useRef<HTMLDivElement>(null)
 
@@ -59,22 +59,38 @@ export default function MobileMenu() {
         className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out"
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
-        <ul className="bg-gray-800 px-4 py-2">
+        <ul className="bg-custom-300 px-4 py-2">
           <li>
-            <Link href="/#propostas" className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-              Propostas
+            <Link href="/contato" 
+            className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+              CONTATO
             </Link>
           </li>
           <li>
-            <Link href="/#Instagram" className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-              Instagram
+            <Link href="/#propostas" 
+            className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+              PROPOSTAS
             </Link>
           </li>
           <li>
-            <Link href="/#videos" className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-              Instagram
+            <Link href="/#Instagram" 
+            className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+            INSTAGRAM
             </Link>
           </li>
+          <li>
+            <Link href="/#videos" 
+            className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+            VÍDEOS
+            </Link>
+          </li>
+          { staged !== 'prod' && (
+                      <li>
+                      <Link href="/d7b459d50991451c9d0c8d5752540f4c" className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                        DATA
+                      </Link>
+                    </li>
+              )}
         </ul>
       </nav>
     </div>

@@ -13,17 +13,12 @@
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.34",
     "@types/react-dom": "18.0.11",
-    "aos": "^3.0.0-beta.6",
+    "aos": "^3.0.0-beta.5",
     "dotenv": "^16.0.3",
-<<<<<<< HEAD
     "next": "^13.4.3",
     "nodemailer": "^6.9.2",
-=======
-    "next": "^13.4.4",
->>>>>>> 77cf12efe6eb719e93a6fe735f1ea2636acc05c1
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "t": "^0.5.1",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
