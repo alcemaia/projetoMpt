@@ -25,7 +25,6 @@ export default function Home() {
       if(igData !== undefined) setInstagramPosts(igData)
     }).catch(e=>console.log(e))
     apiYouTube().then(ytData=>{
-      console.log(ytData, 'yt')
       if(ytData !== undefined) setYouTubePost(ytData)
     }).catch(e=>console.log(e))
   }, [])
