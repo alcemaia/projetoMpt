@@ -10,6 +10,7 @@ import Videos from '@/components/videos'
 import Features from '@/components/features'
 import Newsletter from '@/components/newsletter'
 import Zigzag from '@/components/zigzag'
+import proposta from '@/components/proposta'
 import Testimonials from '@/components/testimonials'
 
 export default function Home() {
