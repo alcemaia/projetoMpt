@@ -1,5 +1,3 @@
-import { IgPostProps } from "@/types/api";
-
 export const apiYouTube = async () => {
   let response
   const API_SITE = process.env.NEXT_PUBLIC_API_SITE

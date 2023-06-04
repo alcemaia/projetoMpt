@@ -24,3 +24,25 @@ export interface VideosPageProps{
   description: string
   ytPosts: VgaPostProps[]
 }
+export interface MailProps {
+  from: string
+  to: string
+  cc: string
+}
+export interface ContactFormProps {
+  email: string
+  name: string
+  subject: string
+  msg: string
+}
+export interface InitValuesForm {
+  values: ContactFormProps
+}
+
+export interface AccessValuesProps {
+  password: string
+}
+
+export interface InitAccessValuesForm {
+  values: AccessValuesProps
+}
