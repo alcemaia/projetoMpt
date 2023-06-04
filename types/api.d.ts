@@ -6,7 +6,8 @@ export interface IgPostProps {
     media_url: string
     permalink: string
     caption: string
-  }
+}
+
 export interface InstagramPageProps{
     title: string
     description: string
@@ -19,7 +20,7 @@ export interface VgaPostProps {
   media_url?: string
   video_url?: string
 }
-export interface VideosPageProps{
+export interface VideosPageProps {
   title: string,
   description: string
   ytPosts: VgaPostProps[]

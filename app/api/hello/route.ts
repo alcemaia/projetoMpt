@@ -40,7 +40,6 @@ import { mailOptions, transporter } from '@/app/services/nodemailer'
 import { MailProps } from '@/types/api'
 import { htmlConstructor } from './helpers'
 export async function GET(request: Request) {
-  console.log('GET')
   // ESTÁ COMENTADA REQUEST REAL PARA ECONOMIZAR FREE TOKEN
   // const ytToken = process.env.NEXT_PUBLIC_YT_TOKEN
   // const playlist = process.env.NEXT_PUBLIC_PLAYLIST
