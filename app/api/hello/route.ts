@@ -37,8 +37,9 @@ const datamock = {data:[
   }
 ]}
 import { mailOptions, transporter } from '@/app/services/nodemailer'
+import { MailProps } from '@/types/api'
+import { htmlConstructor } from './helpers'
 export async function GET(request: Request) {
-  console.log('GET')
   // ESTÁ COMENTADA REQUEST REAL PARA ECONOMIZAR FREE TOKEN
   // const ytToken = process.env.NEXT_PUBLIC_YT_TOKEN
   // const playlist = process.env.NEXT_PUBLIC_PLAYLIST
@@ -74,46 +75,31 @@ export async function GET(request: Request) {
 
 }
 
-export interface MailProps {
-  from: string
-  to: string
-  cc: string
-}
+
 export async function POST(request: Request) {
-  console.log('POST')
-  const req = await request.json() // res now contains body
-  console.log(req)
-  const {values} = req
-  // console.log(res)
-  // console.log(request)
-  const htmlString = `
-    <h1>Versão: ${new Date().getTime()}</h1>
-    <h1>Nome: ${values.name}</h1>
-    <h1>Email: ${values.email}</h1>
-    <h1>Assunto: ${values.subject}</h1>
-    <h1>Mensagem: ${values.msg}</h1>
-  `
-  console.log(htmlString)
+  const req = await request.json()
+  const { values } = req
+  const html = htmlConstructor(values)
   const mailOpt: MailProps = mailOptions as MailProps
-  // user email
-  // activate copy email to contact user
-  if(values.sendCopy) {
-    mailOpt.cc = values.email
-  }
   try {
     await transporter.sendMail(
       {
         ...mailOpt,
-        subject: 'assunto',
-        text: "testa é uma string",
-        html: htmlString
+        subject: `Mensagem de ${values.name}`,
+        // text: "testa é uma string",
+        html: html
       }
     )
-    const resposta = JSON.stringify({ msg: '1'})
+    const resposta = JSON.stringify({ 
+      success: true,
+      data: []
+    })
     return new Response(resposta)
   } catch (err) {
-    console.log(err)
+    const resposta = JSON.stringify({ 
+      error: true,
+      data: err
+    })
+    return new Response(resposta)
   }
-  const resposta = JSON.stringify(req)
-  return new Response(resposta)
 }

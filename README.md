@@ -1,22 +1,10 @@
-to do
 
+finalizar e ajusta request yt 
+ajustar o footer e links
 
-configurar as contas do usuário e seus tokens
-ajustar as cores do projeto
-ajustar o bg do projeto.
-ajusta o email do cliente
-
-finalizar hero
-finalizar instagram
-finalizar videos
-ajustar o menu
-inserir contado
-
-revisar as requests intagram
-revisar request yt
-revisar request contato
-
-
+ig cliente
+yt cliente
+email cliente
 
 
 

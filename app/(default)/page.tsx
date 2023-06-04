@@ -1,19 +1,33 @@
+"use client"; // This is a client component 👈🏽
+
 export const metadata = {
   title: 'Márcio Amazonas',
   description: 'Page description',
 }
 
+import {useState, useEffect } from 'react';
 import Hero from '@/components/hero'
-import Propostas from '@/components/propostas'
 import Instagram from '@/components/instagram'
 import Videos from '@/components/videos'
-import Features from '@/components/features'
-import Newsletter from '@/components/newsletter'
 import Zigzag from '@/components/zigzag'
-import proposta from '@/components/proposta'
-import Testimonials from '@/components/testimonials'
+import { apiInstagram } from '../services/getInstagramData';
+import { apiYouTube } from '../services/getYoutubeData';
 
 export default function Home() {
+  const [InstagramPosts, setInstagramPosts] = useState<any>([])
+  const [YouTubePosts, setYouTubePost] = useState<any>([])
+  
+  useEffect(()=> {
+  }, [InstagramPosts, YouTubePosts])
+  
+  useEffect(()=> {
+    apiInstagram().then(igData=>{
+      if(igData !== undefined) setInstagramPosts(igData)
+    }).catch(e=>console.log(e))
+    apiYouTube().then(ytData=>{
+      if(ytData !== undefined) setYouTubePost(ytData)
+    }).catch(e=>console.log(e))
+  }, [])
   return (
     <>
       <Hero
@@ -21,28 +35,26 @@ export default function Home() {
         description={'MPT DE TODAS E TODOS'}
         />
       <section key="propostas" id="propostas">
-        <Zigzag
-        /></section>
-      <section key="Instagram" id="Instagram">
-        <Instagram 
-          title={'Acompanhe a campanha pelo Instagram'}
-          description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
-        /></section>
+        <Zigzag />
+      </section>
+      {InstagramPosts[0] !== undefined && (
+        <section key="Instagram" id="Instagram">
+          <Instagram 
+            title={'Acompanhe a campanha pelo Instagram'}
+            description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
+            igPosts={InstagramPosts}
+            />
+        </section>
+      )}
+      {YouTubePosts[0] !== undefined && 
       <section key="videos" id="videos">
         <Videos
           title={'Assista nossas ultimas ações'}
           description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
-        /></section>
-      {/* <section key="propostas" id="propostas"><Propostas /></section> */}
-      {/* <section key="propostas" id="propostas"><Zigzag /></section> */}
-      {/* <Testimonials /> */}
-      {/* <Newsletter /> */}
+          ytPosts={YouTubePosts}
+        />
+      </section>
+      } 
     </>
   )
 }
-{/* <section key="navWrap" className={styles.navWrap}>
-<a key="services" href="/#">home</a>
-<a key="portfolio" href="/#portfolio">portfolio</a>
-<a key="contact" href="/#contact">contact</a>
-<a key="about" href="/#about">about</a>
-<Link key="blog" href="/blog">blog</Link> */}

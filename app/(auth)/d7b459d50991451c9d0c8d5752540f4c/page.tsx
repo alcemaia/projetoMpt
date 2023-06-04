@@ -1,34 +1,80 @@
+"use client"; // This is a client component 👈🏽
+import { useState, useEffect } from 'react';
+
 export const metadata = {
   title: 'Controle de Acesso',
   description: 'Page description',
 }
 
 import Link from 'next/link'
+import { AccessValuesProps, InitAccessValuesForm } from '@/types/api';
 
+const initValues: AccessValuesProps = {
+  password: '',
+}
+
+const initState: InitAccessValuesForm = {
+  values: initValues
+}
 export default function ResetPassword() {
+  const [statePage, setStatePage] = useState<string>('dirty');
+  const [state, setState] = useState<InitAccessValuesForm>(initState);
+  const { values } = state
+  const key = process.env.NEXT_PUBLIC_ACCESS
+  const time = process.env.NEXT_PUBLIC_ACCESS_TIME
+
+  const handlerAccess = (event: any) => {
+    // event.preventDefault();
+    const useInput = state.values.password
+    if(key === useInput) {
+      console.log('acess')
+      setStatePage('clean')
+      setTimeout(() => {
+        setStatePage('dirty')
+      }, Number(time))
+    }
+
+  }
+  const handlerChange = ({target}: any) => {
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value
+      }
+    }))
+  }
   return (
+    <>
+    { statePage === 'dirty' && (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-
-          {/* Page header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h1 className="h1 mb-4">Controle de acesso</h1>
             <p className="text-xl text-gray-400">Forneça a senha informada na apresentação.</p>
           </div>
-
-          {/* Form */}
           <div className="max-w-sm mx-auto">
             <form>
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
                   <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">Senha</label>
-                  <input id="email" type="password" className="form-input w-full text-gray-300" placeholder="insira a senha aqui" required />
+                  <input
+                    value={values.password}
+                    onChange={handlerChange} 
+                    name="password"
+                    id="password" 
+                    type="password" 
+                    className="form-input w-full text-gray-300" 
+                    placeholder="insira a senha aqui" 
+                    required
+                  />
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mt-6">
                 <div className="w-full px-3">
                   <button
+                    onClick={handlerAccess}
                     className="btn text-white bg-purple-600 hover:bg-purple-700 w-full"
                     >Acessar Dados</button>
                 </div>
@@ -41,9 +87,24 @@ export default function ResetPassword() {
                 Página inicial</Link>
             </div>
           </div>
-
         </div>
       </div>
     </section>
+    )}
+    { statePage === 'clean' && (
+    <section className="relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+            <h2 className="h1 mb-4">Dados Privados, proibida a reprodução</h2>
+            {/* <p className="text-xl text-gray-400">Forneça a senha informada na apresentação.</p> */}
+          </div>
+          <div className="max-w-sm mx-auto">
+          </div>
+        </div>
+      </div>
+    </section>
+    )}
+    </>
   )
 }
