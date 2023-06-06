@@ -61,8 +61,8 @@ export default function SignIn() {
       <section className="relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-            <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-              <h1 className="h1">Sua opinião é muito importante para nos. </h1>
+            <div className="max-w-3xl mx-auto text-center text-vermelho-900 pb-12 md:pb-20">
+              <h1 className="h1">Sua opinião é muito importante para nós. </h1>
             </div>
             <div className="max-w-sm mx-auto">
               <div className="flex items-center my-6">
@@ -124,7 +124,7 @@ export default function SignIn() {
                 </div>
                 <div className="flex flex-wrap -mx-3 mt-6">
                   <div className="w-full px-3">
-                    <button type="submit" className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Enviar</button>
+                    <button type="submit" className="btn text-white bg-vermelho-900 hover:bg-custom-200 w-full">Enviar</button>
                   </div>
                 </div>
               </form>

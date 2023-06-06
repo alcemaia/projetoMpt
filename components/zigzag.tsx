@@ -18,7 +18,7 @@ const mockPropostas = [
       'Criar o Comitê da Diversidade na administração superior.'
     ], 
     //topTitle: 'Este é o complemento superior',
-    title: 'MPT+ democrático',
+    title: 'MPT+ Democrático',
     //description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     img: FeatImage01,
   }, 
@@ -80,6 +80,10 @@ export default function Zigzag() {
             Por isso mesmo, ele criou, a partir do diálogo com colegas e especialistas, o programa de gestão MPT+, baseado em três eixos estratégicos, que reúnem metas a serem cumpridas pela próxima gestão do Ministério Público do Trabalho. São eles: +MPT+ democrático, MPT+ estruturado e MPT+ forte*. 
             A ideia do programa é permitir que as diretrizes pensadas para o biênio 2023-2025 possam ser conhecidas em profundidade pelos demais procuradores e procuradoras do Trabalho, bem como os meios para serem executadas e os reflexos positivos que terão para o fortalecimento da instituição.
             </p>
+          </div>
+          <div className="max-w-3xl text-vermelho-900 mx-auto text-center pb-12 md:pb-16">
+            <h1 className="h2 mb-4">PROPOSTAS</h1>
+        
           </div>
 
           <div className="grid gap-20">

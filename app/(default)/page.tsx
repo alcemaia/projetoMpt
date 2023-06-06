@@ -41,7 +41,7 @@ export default function Home() {
         <section key="Instagram" id="Instagram">
           <Instagram 
             title={'Acompanhe a campanha pelo Instagram'}
-            description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
+            //description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
             igPosts={InstagramPosts}
             />
         </section>
@@ -50,7 +50,7 @@ export default function Home() {
       <section key="videos" id="videos">
         <Videos
           title={'Assista nossas ultimas ações'}
-          description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
+          //description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
           ytPosts={YouTubePosts}
         />
       </section>
