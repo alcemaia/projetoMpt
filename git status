@@ -1,0 +1,97 @@
+[33mcommit de4b4f896162456fe85490fd7828e63f184b852d[m[33m ([m[1;36mHEAD -> [m[1;32mlayout[m[33m)[m
+Author: AlceMaia <alceniziamaia@gmail.com>
+Date:   Mon Jun 5 21:15:13 2023 -0300
+
+    alterações nas cores das redes sociais
+
+[33mcommit ee691e7d735ad787a93ddc7d7801e1e0e851182d[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mdevelop[m[33m)[m
+Merge: dda8968 e2cc707
+Author: Ivan Zichtl <izichtl@gmail.com>
+Date:   Sun Jun 4 18:45:48 2023 -0300
+
+    Merge pull request #2 from alcemaia/feat/insert-text
+    
+    inclusão de texto e ajustes no layout
+
+[33mcommit e2cc707f75aefcf21f1f1ed2682b56fa8365ec36[m[33m ([m[1;31morigin/feat/insert-text[m[33m)[m
+Merge: 6373d5e dda8968
+Author: DESKTOP-5SMQO9E\izich <ivan.name Ivan>
+Date:   Sun Jun 4 18:45:18 2023 -0300
+
+    resolved conflict changes
+
+[33mcommit 6373d5ed8b9ed9ecf86edfad4ffb063c8776bffa[m[33m ([m[1;32mfeat/insert-text[m[33m)[m
+Author: AlceMaia <alceniziamaia@gmail.com>
+Date:   Sun Jun 4 18:27:22 2023 -0300
+
+    inclusão de texto e ajustes no layout
+
+[33mcommit dda8968f371bcff33375949b0eb8583ae4030a0c[m
+Merge: 1d4d55a 27a1ab1
+Author: Ivan Zichtl <izichtl@gmail.com>
+Date:   Sun Jun 4 18:16:56 2023 -0300
+
+    Merge pull request #1 from alcemaia/feat/api-corrections
+    
+    Feat/api-corrections
+
+[33mcommit 27a1ab14df2e4352948a3cc1956758e070b12f4d[m[33m ([m[1;31morigin/feat/api-corrections[m[33m)[m
+Author: DESKTOP-5SMQO9E\izich <ivan.name Ivan>
+Date:   Sun Jun 4 18:16:21 2023 -0300
+
+    changes release
+
+[33mcommit 49fea2b1416dfc1ac2f194ea670edf3a0e855b90[m
+Author: DESKTOP-5SMQO9E\izich <ivan.name Ivan>
+Date:   Sun Jun 4 16:20:16 2023 -0300
+
+    control page and email request handler
+
+[33mcommit c06cbaa1fccefc70ad871d048b26cc7c51d4abf1[m
+Author: DESKTOP-5SMQO9E\izich <ivan.name Ivan>
+Date:   Sun Jun 4 14:04:48 2023 -0300
+
+    API handler erros and correct architecture
+
+[33mcommit 1d4d55a1ed380445ff5983da98408fa950aad2f8[m
+Merge: eb7b583 77cf12e
+Author: DESKTOP-5SMQO9E\izich <ivan.name Ivan>
+Date:   Mon May 29 23:56:06 2023 -0300
+
+    resolved conflicts
+
+[33mcommit eb7b5838555c33b61e3f740fda201b444a0b7b45[m
+Author: DESKTOP-5SMQO9E\izich <ivan.name Ivan>
+Date:   Mon May 29 22:57:00 2023 -0300
+
+    feat: update
+
+[33mcommit 77cf12efe6eb719e93a6fe735f1ea2636acc05c1[m
+Author: AlceMaia <alceniziamaia@gmail.com>
+Date:   Sat May 27 14:00:22 2023 -0300
+
+    Troca de título para o nome do candidato
+
+[33mcommit 5aae063699ef739582679492c5f3598110e72913[m
+Author: AlceMaia <alceniziamaia@gmail.com>
+Date:   Sat May 27 13:43:50 2023 -0300
+
+    mudança na cor do houver
+
+[33mcommit 8633d0a814fe80520ce07c70bf4fd75bfe7dc910[m
+Author: AlceMaia <alceniziamaia@gmail.com>
+Date:   Sat May 27 13:41:06 2023 -0300
+
+    mudança de cores no texto do header
+
+[33mcommit 6f3baf35fe576e13d76144701295863f6cc703e4[m
+Author: AlceMaia <alceniziamaia@gmail.com>
+Date:   Sat May 27 13:31:35 2023 -0300
+
+    criação de variaveis de cores e alteração de bg
+
+[33mcommit fc43fa804efbbd0e073e634387307c15fc923338[m
+Author: DESKTOP-5SMQO9E\izich <ivan.name Ivan>
+Date:   Mon May 22 22:37:39 2023 -0300
+
+    feat: primeiro commit e start do projeto
