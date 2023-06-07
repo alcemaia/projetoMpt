@@ -12,6 +12,7 @@ import Videos from '@/components/videos'
 import Zigzag from '@/components/zigzag'
 import { apiInstagram } from '../services/getInstagramData';
 import { apiYouTube } from '../services/getYoutubeData';
+import Proposta from '@/components/proposta';
 
 export default function Home() {
   const [InstagramPosts, setInstagramPosts] = useState<any>([])
@@ -28,12 +29,17 @@ export default function Home() {
       if(ytData !== undefined) setYouTubePost(ytData)
     }).catch(e=>console.log(e))
   }, [])
+
+  const zigzagComponent = <Zigzag />;
   return (
     <>
       <Hero
         title={'Márcio Amazonas, candidato a PGT'}
         description={'MPT DE TODAS E TODOS'}
         />
+        <section key="MPT+" id="">
+        < zigzagComponent/>
+      </section>
       <section key="propostas" id="propostas">
         <Zigzag />
       </section>
