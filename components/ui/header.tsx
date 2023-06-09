@@ -25,7 +25,7 @@ export default function Header() {
                   href="/#"
                   className="font-bold text-custom-200 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  MPT+
+                  MARCIO
                 </Link>
               </li>
               <li>
@@ -33,7 +33,7 @@ export default function Header() {
                   href="/#propostas"
                   className="font-bold text-custom-200 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  PROPOSTAS
+                  MPT+
                 </Link>
               </li>
               <li>
@@ -41,7 +41,7 @@ export default function Header() {
                   href="/#Instagram"
                   className="font-bold text-custom-200 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  INSTAGRAM
+                  AGENDA
                 </Link>
               </li>
               <li>
@@ -57,7 +57,7 @@ export default function Header() {
                   href="/contato"
                   className="font-bold text-custom-200 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  CONTATO
+                  PARTICIPE
                 </Link>
               </li>
               { staged !== 'prod' && (
