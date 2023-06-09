@@ -9,7 +9,7 @@ export const apiYouTube = async () => {
   if(data !== undefined) {
     // RESOLVE OS DADOS. 
     const lastSix = receivedData.data.filter((post:any, index: number) => {
-        if(index <= 5) return true
+        if(index <= 2) return true
         return false
     })
     if(lastSix !== undefined) {
