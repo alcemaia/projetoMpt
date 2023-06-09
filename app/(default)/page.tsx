@@ -46,7 +46,7 @@ export default function Home() {
       {InstagramPosts[0] !== undefined && (
         <section key="Instagram" id="Instagram">
           <Instagram 
-            title={'Acompanhe a campanha pelo Instagram'}
+            title={'@marcio.amazonas'}
             //description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
             igPosts={InstagramPosts}
             />
@@ -55,7 +55,7 @@ export default function Home() {
       {YouTubePosts[0] !== undefined && 
       <section key="videos" id="videos">
         <Videos
-          title={'Assista nossas ultimas ações'}
+          title={'MPT+: Programa de gestão'}
           //description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
           ytPosts={YouTubePosts}
         />
