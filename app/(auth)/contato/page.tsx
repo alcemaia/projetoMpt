@@ -62,7 +62,7 @@ export default function SignIn() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
             <div className="max-w-3xl mx-auto text-center text-vermelho-900 pb-12 md:pb-20">
-              <h1 className="h1">Sua opinião é muito importante para nós. </h1>
+              <h1 className="h1">Manifeste também o seu orgulho de ser MPT</h1>
             </div>
             <div className="max-w-sm mx-auto">
               <div className="flex items-center my-6">
@@ -85,7 +85,7 @@ export default function SignIn() {
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">Seu Email</label>
+                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">E-mail</label>
                     <input
                       value={values.email}
                       onChange={handlerChange}
@@ -98,19 +98,19 @@ export default function SignIn() {
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Assunto</label>
+                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Ação proposta</label>
                     <input 
                       onChange={handlerChange} 
                       id="subject" 
                       name="subject" 
                       type="text" 
                       className="form-input w-full text-gray-300" 
-                      placeholder="Assunto" required />
+                      placeholder="Digite aqui" required />
                   </div>
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Mensagem</label>
+                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Como você pode ter ainda mais orgulho de ser MPT</label>
                       <textarea 
                         id="w3review" 
                         onChange={handlerChange} 
