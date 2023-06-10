@@ -61,21 +61,21 @@ export default function MobileMenu() {
       >
         <ul className="bg-custom-300 px-4 py-2">
           <li>
-            <Link href="/contato" 
+            <Link href="/#marcio" 
             className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-              CONTATO
+              MARCIO
             </Link>
           </li>
           <li>
             <Link href="/#propostas" 
             className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-              PROPOSTAS
+              MPT+
             </Link>
           </li>
           <li>
             <Link href="/#Instagram" 
             className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-            INSTAGRAM
+            AGENDA
             </Link>
           </li>
           <li>
