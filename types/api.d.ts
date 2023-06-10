@@ -10,7 +10,7 @@ export interface IgPostProps {
 
 export interface InstagramPageProps{
     title: string
-    description: string
+    description?: string
     igPosts: IgPostProps[]
 }
 
@@ -22,7 +22,7 @@ export interface VgaPostProps {
 }
 export interface VideosPageProps {
   title: string,
-  description: string
+  description?: string
   ytPosts: VgaPostProps[]
 }
 export interface MailProps {

@@ -12,7 +12,6 @@ export default function Codebox(props: any) {
 
   return (
     <div className="mb-20 md:grid md:grid-cols-12 md:gap-6 items-center">
-
         <div className={style} data-aos="fade-up" >
           <div className='bd-gray-900 p-10 flex justify-center' >
               <Image

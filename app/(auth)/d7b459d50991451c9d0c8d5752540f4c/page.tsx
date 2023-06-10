@@ -4,11 +4,6 @@ import { useQRCode } from 'next-qrcode';
 import Qrcodes from '@/components/qrcodes'
 
 
-export const metadata = {
-  title: 'Controle de Acesso',
-  description: 'Page description',
-}
-
 import Link from 'next/link'
 import { AccessValuesProps, InitAccessValuesForm } from '@/types/api';
 

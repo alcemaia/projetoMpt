@@ -1,9 +1,5 @@
 import Image from 'next/image'
 
-import FeatImage01 from '@/public/images/features-03-image-01.png'
-import FeatImage02 from '@/public/images/features-03-image-02.png'
-import FeatImage03 from '@/public/images/features-03-image-03.png'
-import Proposta from '@/components/proposta'
 import MarcioImg01 from '@/public/images/marcio01.jpg'
 import MarcioImg02 from '@/public/images/marcio02.jpeg'
 import MarcioImg03 from '@/public/images/marcio03.jpeg'
@@ -32,9 +28,9 @@ export default function Sobre() {
             <div className="w-full md:w-1/2">
             <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg02} width={width} height={height} alt="Features 02" />
           </div>
-        <div className="w-full md:w-1/2">
-        <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg03} width={width} height={height} alt="Features 02" />
-        </div>
+          <div className="w-full md:w-1/2">
+          <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg03} width={width} height={height} alt="Features 02" />
+          </div>
             </div>
           </div>
         </div>
