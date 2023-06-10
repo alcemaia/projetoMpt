@@ -60,28 +60,34 @@ export default function MobileMenu() {
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
         <ul className="bg-custom-300 px-4 py-2">
-          <li>
-            <Link href="/contato" 
+        <li>
+            <Link href="/#propostas" 
             className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-              CONTATO
+              MÁRCIO
             </Link>
           </li>
           <li>
             <Link href="/#propostas" 
             className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-              PROPOSTAS
+              MPT+
             </Link>
           </li>
           <li>
             <Link href="/#Instagram" 
             className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-            INSTAGRAM
+            AGENDA
             </Link>
           </li>
           <li>
             <Link href="/#videos" 
             className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
             VÍDEOS
+            </Link>
+          </li>
+          <li>
+            <Link href="/contato" 
+            className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+              PARTICIPE
             </Link>
           </li>
           { staged !== 'prod' && (
