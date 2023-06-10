@@ -1,7 +1,8 @@
 export const apiYouTube = async () => {
   let response
   const API_SITE = process.env.NEXT_PUBLIC_API_SITE
-  const url = `${API_SITE}/api/hello`
+  const url = '/api/hello'
+  // const url = `${API_SITE}/api/hello`
   
   const receivedData = await fetch(url).then(r=>r.json())
   const data = receivedData.data
