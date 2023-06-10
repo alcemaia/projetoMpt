@@ -5,7 +5,8 @@ import Logo from '../logo'
 export default function Footer() {
   return (
     <footer>
-      <div className="py-12 md:py-16">
+      <div className="bg-cover bg-center" style={{ backgroundImage: "url('/images/MosaicBackground.png')" }}>
+      <div className="py-12 md:py-5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
           {/* Top area: Blocks */}
@@ -134,6 +135,7 @@ export default function Footer() {
           </div>
 
         </div>
+      </div>
       </div>
     </footer>
   )

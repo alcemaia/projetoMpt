@@ -33,6 +33,7 @@ export default function Home() {
   const zigzagComponent = <Zigzag />;
   return (
     <>
+    <div className="bg-cover bg-center bg-opacity-70" style={{ backgroundImage: "url('/images/MosaicBackground.png')" }}>
       <Hero
         title={'Márcio Amazonas, candidato a PGT'}
         description={'MPT DE TODAS E TODOS'}
@@ -60,7 +61,8 @@ export default function Home() {
           ytPosts={YouTubePosts}
         />
       </section>
-      } 
+      }
+      </div> 
     </>
   )
 }
