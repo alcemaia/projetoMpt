@@ -1,5 +1,8 @@
 "use client"; // This is a client component 👈🏽
 import { useState, useEffect } from 'react';
+import { useQRCode } from 'next-qrcode';
+import Qrcodes from '@/components/qrcodes'
+
 
 export const metadata = {
   title: 'Controle de Acesso',
@@ -16,18 +19,19 @@ const initValues: AccessValuesProps = {
 const initState: InitAccessValuesForm = {
   values: initValues
 }
+
 export default function ResetPassword() {
+  const { Image } = useQRCode();
+
   const [statePage, setStatePage] = useState<string>('dirty');
   const [state, setState] = useState<InitAccessValuesForm>(initState);
   const { values } = state
   const key = process.env.NEXT_PUBLIC_ACCESS
   const time = process.env.NEXT_PUBLIC_ACCESS_TIME
 
-  const handlerAccess = (event: any) => {
-    // event.preventDefault();
+  const handlerAccess = () => {
     const useInput = state.values.password
     if(key === useInput) {
-      console.log('acess')
       setStatePage('clean')
       setTimeout(() => {
         setStatePage('dirty')
@@ -91,20 +95,7 @@ export default function ResetPassword() {
       </div>
     </section>
     )}
-    { statePage === 'clean' && (
-    <section className="relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h1 mb-4">Dados Privados, proibida a reprodução</h2>
-            {/* <p className="text-xl text-gray-400">Forneça a senha informada na apresentação.</p> */}
-          </div>
-          <div className="max-w-sm mx-auto">
-          </div>
-        </div>
-      </div>
-    </section>
-    )}
+    { statePage === 'clean' && (<Qrcodes />)}
     </>
   )
 }
