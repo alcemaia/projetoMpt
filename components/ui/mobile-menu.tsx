@@ -84,13 +84,20 @@ export default function MobileMenu() {
             VÍDEOS
             </Link>
           </li>
-          { staged !== 'prod' && (
-                      <li>
-                      <Link href="/d7b459d50991451c9d0c8d5752540f4c" className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                        DATA
-                      </Link>
-                    </li>
-              )}
+          <li>
+            <Link href="/contato" 
+            className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+              PARTICIPE
+            </Link>
+          </li>
+          { staged !== 'prod' && 
+            (
+              <li>
+                <Link href="/d7b459d50991451c9d0c8d5752540f4c" className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                  DATA
+                </Link>
+              </li>
+            )}
         </ul>
       </nav>
     </div>
