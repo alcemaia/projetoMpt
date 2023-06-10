@@ -1,78 +1,37 @@
-const datamock = {data:[
-  {
-    title: 'Márcio Amazonas - Por um MPT mais forte',
-    description: '',
-    video_url: 'https://www.youtube.com/watch?v=TWrizVQmiEQ',
-    media_url: 'https://i.ytimg.com/vi/TWrizVQmiEQ/sddefault.jpg'
-  },
-  {
-    title: 'Márcio Amazonas - Orçamento',
-    description: '',
-    video_url: 'https://www.youtube.com/watch?v=ERZkbpFUY9s',
-    media_url: 'https://i.ytimg.com/vi/ERZkbpFUY9s/sddefault.jpg'
-  },
-  {
-    title: 'Márcio Amazonas - Eixo Articulação',
-    description: '',
-    video_url: 'https://www.youtube.com/watch?v=lbqVHNF3EPk',
-    media_url: 'https://i.ytimg.com/vi/lbqVHNF3EPk/sddefault.jpg'
-  },
-  {
-    title: 'Márcio Amazonas - Eixo TI e Inovação',
-    description: '',
-    video_url: 'https://www.youtube.com/watch?v=P36z6MHHf-Y',
-    media_url: 'https://i.ytimg.com/vi/P36z6MHHf-Y/sddefault.jpg'
-  },
-  {
-    title: 'Márcio Amazonas - Eixo Estrutura de Trabalho (Teletrabalho)',
-    description: '',
-    video_url: 'https://www.youtube.com/watch?v=aH0TCWPonD0',
-    media_url: 'https://i.ytimg.com/vi/aH0TCWPonD0/sddefault.jpg'
-  },
-  {
-    title: 'Márcio Amazonas - Eixo Estrutura de Trabalho',
-    description: '',
-    video_url: 'https://www.youtube.com/watch?v=5oS0HH1DzX0',
-    media_url: 'https://i.ytimg.com/vi/5oS0HH1DzX0/sddefault.jpg'
-  }
-]}
 import { mailOptions, transporter } from '@/app/services/nodemailer'
 import { MailProps } from '@/types/api'
 import { htmlConstructor } from './helpers'
 export async function GET(request: Request) {
   // ESTÁ COMENTADA REQUEST REAL PARA ECONOMIZAR FREE TOKEN
-  // const ytToken = process.env.NEXT_PUBLIC_YT_TOKEN
-  // const playlist = process.env.NEXT_PUBLIC_PLAYLIST
-  // const youtubeURL = `https://youtube.googleapis.com/youtube/v3/playlistItems?playlistId=${playlist}&key=${ytToken}&maxResults=6&part=snippet`
-  // const data = await fetch(youtubeURL).then(response => response.json())
-  //   .then(data => data)
-  //   .catch(error => {
-  //     console.error(error);
-  //   });
-  // if (data !== undefined) {
-  //   if(data.items !== undefined) {
-  //     const dataArr = data.items
-  //     const aaa = dataArr.map((e) => {
-  //       const data = e.snippet
-  //       const videoId = data.resourceId
-  //       const thumbnails = data.thumbnails.standard.url
-  //       const retorno = {
-  //         title: data.title,
-  //         description: data.description,
-  //         link: `https://www.youtube.com/watch?v=${videoId.videoId}`,
-  //         thumbnails,
-  //       }
-  //       console.log(retorno)
-  //       return retorno
-  //     })
-  //     // console.log(dataArr)
-      
-  //   }
-  // }
-    // console.log(data)
-    // // return new Response(resposta)
-    return new Response(JSON.stringify(datamock))
-
+  const ytToken = process.env.NEXT_PUBLIC_YT_TOKEN
+  const playlist = process.env.NEXT_PUBLIC_PLAYLIST
+  let responseHandler
+  const youtubeURL = `https://youtube.googleapis.com/youtube/v3/playlistItems?playlistId=${playlist}&key=${ytToken}&maxResults=6&part=snippet`
+  const data = await fetch(youtubeURL).then(response => response.json())
+    .then(data => data)
+    .catch(error => {
+      console.error(error);
+    });
+  if (data !== undefined) {
+    if(data.items !== undefined) {
+      const dataArr = data.items
+      const dataInResponsePattern = dataArr.map((itemVideo: any) => {
+        const data = itemVideo.snippet
+        const videoId = data.resourceId
+        const thumbnails = data.thumbnails.standard.url
+        const retorno = {
+          title: data.title,
+          description: data.description,
+          video_url: `https://www.youtube.com/watch?v=${videoId.videoId}`,
+          media_url: thumbnails,
+        }
+        return retorno
+      })
+      responseHandler = dataInResponsePattern
+    }
+  }
+  const response = { data: responseHandler }
+  return new Response(JSON.stringify(response))
 }
 
 
@@ -86,7 +45,6 @@ export async function POST(request: Request) {
       {
         ...mailOpt,
         subject: `Mensagem de ${values.name}`,
-        // text: "testa é uma string",
         html: html
       }
     )
