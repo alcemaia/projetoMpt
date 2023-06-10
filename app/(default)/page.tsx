@@ -1,10 +1,5 @@
 "use client"; // This is a client component 👈🏽
 
-export const metadata = {
-  title: 'Márcio Amazonas',
-  description: 'Page description',
-}
-
 import {useState, useEffect } from 'react';
 import Hero from '@/components/hero'
 import Instagram from '@/components/instagram'
@@ -12,7 +7,6 @@ import Videos from '@/components/videos'
 import Zigzag from '@/components/zigzag'
 import { apiInstagram } from '../services/getInstagramData';
 import { apiYouTube } from '../services/getYoutubeData';
-import Proposta from '@/components/proposta';
 import Sobre from '@/components/sobre';
 
 export default function Home() {
@@ -31,45 +25,38 @@ export default function Home() {
     }).catch(e=>console.log(e))
   }, [])
 
-  const zigzagComponent = <Zigzag />;
   return (
     <>
-    <div className="bg-cover bg-center bg-opacity-70 TTT" style={{ 
-      backgroundImage: "url('/images/MosaicBackground_50.png')",
-      // opacity:0.4
-
-      }}>
-      <Hero
-        title={'Márcio Amazonas, candidato a PGT'}
-        description={'MPT DE TODAS E TODOS'}
-        />
-        {/* <section key="MPT+" id="">
-        < zigzagComponent/>
-      </section> */}
-      <section key="marcio" id="marcio">
-        <Sobre />
-      </section>
-      <section key="propostas" id="propostas">
-        <Zigzag />
-      </section>
-      {InstagramPosts[0] !== undefined && (
-        <section key="Instagram" id="Instagram">
-          <Instagram 
-            title={'@marcio.amazonas'}
-            //description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
-            igPosts={InstagramPosts}
-            />
+      <div className="bg-cover bg-center bg-opacity-70 TTT" style={{ 
+        backgroundImage: "url('/images/MosaicBackground_50.png')",
+        }}>
+        <Hero
+          title={'Márcio Amazonas, candidato a PGT'}
+          description={'MPT DE TODAS E TODOS'}
+          />
+        <section key="marcio" id="marcio">
+          <Sobre />
         </section>
-      )}
-      {YouTubePosts[0] !== undefined && 
-      <section key="videos" id="videos">
-        <Videos
-          title={'MPT+  Programa de gestão'}
-          //description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
-          ytPosts={YouTubePosts}
-        />
-      </section>
-      }
+        <section key="propostas" id="propostas">
+          <Zigzag />
+        </section>
+        {InstagramPosts[0] !== undefined && (
+          <section key="Instagram" id="Instagram">
+            <Instagram 
+              title={'@marcio.amazonas'}
+              igPosts={InstagramPosts}
+              />
+          </section>
+        )}
+        {
+          YouTubePosts[0] !== undefined && 
+            <section key="videos" id="videos">
+              <Videos
+                title={'MPT+  Programa de gestão'}
+                ytPosts={YouTubePosts}
+              />
+            </section>
+        }
       </div> 
     </>
   )

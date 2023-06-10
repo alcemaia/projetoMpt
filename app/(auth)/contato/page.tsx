@@ -1,11 +1,6 @@
 "use client"; // This is a client component 👈🏽
 import { useState, useEffect } from 'react';
 
-export const metadata = {
-  title: 'Sign In - Open PRO',
-  description: 'Page description',
-}
-
 import { sendContactForm } from '@/app/services/sendContactForm';
 import { ContactFormProps, InitValuesForm } from '../../../types/api';
 
