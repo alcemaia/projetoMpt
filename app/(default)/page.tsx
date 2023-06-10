@@ -1,10 +1,5 @@
 "use client"; // This is a client component 👈🏽
 
-export const metadata = {
-  title: 'Márcio Amazonas',
-  description: 'Page description',
-}
-
 import {useState, useEffect } from 'react';
 import Hero from '@/components/hero'
 import Instagram from '@/components/instagram'
