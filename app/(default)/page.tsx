@@ -13,6 +13,7 @@ import Zigzag from '@/components/zigzag'
 import { apiInstagram } from '../services/getInstagramData';
 import { apiYouTube } from '../services/getYoutubeData';
 import Proposta from '@/components/proposta';
+import Sobre from '@/components/sobre';
 
 export default function Home() {
   const [InstagramPosts, setInstagramPosts] = useState<any>([])
@@ -33,13 +34,20 @@ export default function Home() {
   const zigzagComponent = <Zigzag />;
   return (
     <>
-    <div className="bg-cover bg-center bg-opacity-70" style={{ backgroundImage: "url('/images/MosaicBackground.png')" }}>
+    <div className="bg-cover bg-center bg-opacity-70 TTT" style={{ 
+      backgroundImage: "url('/images/MosaicBackground_50.png')",
+      // opacity:0.4
+
+      }}>
       <Hero
         title={'Márcio Amazonas, candidato a PGT'}
         description={'MPT DE TODAS E TODOS'}
         />
-        <section key="MPT+" id="">
+        {/* <section key="MPT+" id="">
         < zigzagComponent/>
+      </section> */}
+      <section key="marcio" id="marcio">
+        <Sobre />
       </section>
       <section key="propostas" id="propostas">
         <Zigzag />

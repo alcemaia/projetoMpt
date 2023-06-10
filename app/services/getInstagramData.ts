@@ -16,8 +16,6 @@ export const apiInstagram = async () => {
     })
     if(lastSix !== undefined) {
       const postData: IgPostProps = lastSix.map((post: IgPostProps) => {
-        console.log(post)
-        
         const returnPost: IgPostProps = {
           id: post.id, 
           title: post.caption,

@@ -62,16 +62,7 @@ export default function Zigzag() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20 border-t border-gray-800">
 
-          {/* Section header */}
-          <div className="max-w-3xl text-vermelho-900 mx-auto text-justify pb-14 md:pb-16">
-            <h1 className="h2 mb-4">MÁRCIO AMAZONAS</h1>
-            <p className="text-xl text-gray-400">
-            Márcio Amazonas é procurador do Trabalho desde 2010, tendo oficiado no Amapá, na Bahia, no Distrito Federal e em Sergipe.
-            Ele fez parte da administração superior da Procuradoria-Geral do Trabalho entre 2015 e 2021, como Secretário Jurídico e Secretário de Relações Institucionais, atuações que fizeram de Márcio o candidato mais votado na última eleição para PGT.
-            Movido pelo desejo de fazer o Ministério Público do Trabalho avançar e pelo orgulho de ser MPT, Márcio é novamente candidato em 2023, com uma campanha propositiva e a defesa de um programa de gestão sólido intitulado de MPT+.
-            Márcio acredita num MPT de todas e de todos, mais democrático, estruturado e forte, com foco nas ações finalísticas, capaz de projetar e engrandecer a instituição.
-            </p>
-          </div>
+
 
           <div className="max-w-3xl text-vermelho-900 mx-auto text-justify pb-12 md:pb-16">
             <h1 className="h2 mb-4">MPT+</h1>
@@ -81,39 +72,24 @@ export default function Zigzag() {
             A ideia do programa é permitir que as diretrizes pensadas para o biênio 2023-2025 possam ser conhecidas em profundidade pelos demais procuradores e procuradoras do Trabalho, bem como os meios para serem executadas e os reflexos positivos que terão para o fortalecimento da instituição.
             </p>
           </div>
+
           <div className="max-w-3xl text-vermelho-900 mx-auto text-center pb-12 md:pb-16">
             <h1 className="h2 mb-4">PROPOSTAS</h1>
-        
           </div>
-
           <div className="grid gap-20">
-          {/* <Proposta
-            isLeft={false} 
-            itemA={'Duis aute irure dolor in reprehenderit'}
-            itemB={'Excepteur sint occaecat'}
-            itemC={'Amet consectetur adipiscing elit'}
-            topTitle={'Este é o complemento superior'}
-            title={'Essa é a primeira proposta'}
-            description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
-            img={FeatImage01}
-          /> */}
-          {
-            mockPropostas.map((proposta:any)=>{
-              return (          
-            <Proposta
-                isLeft={proposta.isLeft}
-                points={proposta.points} 
-                // itemA={proposta.itemA}
-                // itemB={proposta.itemB}
-                // itemC={proposta.itemC}
-                topTitle={proposta.topTitle}
-                title={proposta.title}
-                description={proposta.description}
-                img={proposta.img}
-              />)
-            })
-          }
-    
+            {
+              mockPropostas.map((proposta:any)=>{
+                return (          
+              <Proposta
+                  isLeft={proposta.isLeft}
+                  points={proposta.points} 
+                  topTitle={proposta.topTitle}
+                  title={proposta.title}
+                  description={proposta.description}
+                  img={proposta.img}
+                />)
+              })
+            }
           </div>
         </div>
       </div>

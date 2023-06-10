@@ -8,8 +8,8 @@ import Codebox from './codebox';
 export default function Qrcodes(props: any) {
   const data = [
     {
-      title: 'Titulo QrCode A',
-      subtitle: 'subtitulo do qrcode a',
+      title: process.env.NEXT_PUBLIC_QRCODE_TITLE_A,
+      subtitle: process.env.NEXT_PUBLIC_QRCODE_SUBTITLE_A,
       link: process.env.NEXT_PUBLIC_QRCODE_A,
       side: false
     },

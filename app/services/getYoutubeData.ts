@@ -5,7 +5,7 @@ export const apiYouTube = async () => {
   
   const receivedData = await fetch(url).then(r=>r.json())
   const data = receivedData.data
-  
+  console.log(data, '@@@@')
   if(data !== undefined) {
     // RESOLVE OS DADOS. 
     const lastSix = receivedData.data.filter((post:any, index: number) => {
