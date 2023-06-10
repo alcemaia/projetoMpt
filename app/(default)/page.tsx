@@ -12,6 +12,7 @@ import Videos from '@/components/videos'
 import Zigzag from '@/components/zigzag'
 import { apiInstagram } from '../services/getInstagramData';
 import { apiYouTube } from '../services/getYoutubeData';
+import Proposta from '@/components/proposta';
 
 export default function Home() {
   const [InstagramPosts, setInstagramPosts] = useState<any>([])
@@ -28,19 +29,25 @@ export default function Home() {
       if(ytData !== undefined) setYouTubePost(ytData)
     }).catch(e=>console.log(e))
   }, [])
+
+  const zigzagComponent = <Zigzag />;
   return (
     <>
+    <div className="bg-cover bg-center bg-opacity-70" style={{ backgroundImage: "url('/images/MosaicBackground.png')" }}>
       <Hero
         title={'Márcio Amazonas, candidato a PGT'}
         description={'MPT DE TODAS E TODOS'}
         />
+        <section key="MPT+" id="">
+        < zigzagComponent/>
+      </section>
       <section key="propostas" id="propostas">
         <Zigzag />
       </section>
       {InstagramPosts[0] !== undefined && (
         <section key="Instagram" id="Instagram">
           <Instagram 
-            title={'Acompanhe a campanha pelo Instagram'}
+            title={'@marcio.amazonas'}
             //description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
             igPosts={InstagramPosts}
             />
@@ -49,12 +56,13 @@ export default function Home() {
       {YouTubePosts[0] !== undefined && 
       <section key="videos" id="videos">
         <Videos
-          title={'Assista nossas ultimas ações'}
+          title={'MPT+  Programa de gestão'}
           //description={'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
           ytPosts={YouTubePosts}
         />
       </section>
-      } 
+      }
+      </div> 
     </>
   )
 }

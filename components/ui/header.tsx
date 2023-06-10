@@ -22,10 +22,10 @@ export default function Header() {
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
                 <Link
-                  href="/contato"
+                  href="/#"
                   className="font-bold text-custom-200 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  CONTATO
+                  MARCIO
                 </Link>
               </li>
               <li>
@@ -33,7 +33,7 @@ export default function Header() {
                   href="/#propostas"
                   className="font-bold text-custom-200 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  PROPOSTAS
+                  MPT+
                 </Link>
               </li>
               <li>
@@ -41,7 +41,7 @@ export default function Header() {
                   href="/#Instagram"
                   className="font-bold text-custom-200 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  INSTAGRAM
+                  AGENDA
                 </Link>
               </li>
               <li>
@@ -52,6 +52,14 @@ export default function Header() {
                   VÍDEOS
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/contato"
+                  className="font-bold text-custom-200 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  PARTICIPE
+                </Link>
+              </li>
               { staged !== 'prod' && (
               <li>
                 <Link
@@ -60,6 +68,7 @@ export default function Header() {
                   DATA
                 </Link>
               </li>
+              
               )}
             </ul>
           </nav>
