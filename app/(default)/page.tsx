@@ -40,14 +40,6 @@ export default function Home() {
         <section key="propostas" id="propostas">
           <Zigzag />
         </section>
-        {InstagramPosts[0] !== undefined && (
-          <section key="Instagram" id="Instagram">
-            <Instagram 
-              title={'@marcio.amazonas'}
-              igPosts={InstagramPosts}
-              />
-          </section>
-        )}
         {
           YouTubePosts[0] !== undefined && 
             <section key="videos" id="videos">
@@ -57,6 +49,15 @@ export default function Home() {
               />
             </section>
         }
+        {
+          InstagramPosts[0] !== undefined && (
+          <section key="Instagram" id="Instagram">
+            <Instagram 
+              title={'@marcio.amazonas'}
+              igPosts={InstagramPosts}
+              />
+          </section>
+        )}
       </div> 
     </>
   )
