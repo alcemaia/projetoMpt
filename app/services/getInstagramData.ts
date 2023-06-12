@@ -1,4 +1,4 @@
-import { IgPostProps } from "@/types/api";
+import { IgPostProps, IgPostAPIProps } from "@/types/api";
 
 export const apiInstagram = async () => {
   let response
@@ -11,7 +11,7 @@ export const apiInstagram = async () => {
   }
 
   const accessToken = process.env.NEXT_PUBLIC_IG_TOKEN
-  const fields = 'media_url,media_type,permalink,id,caption'
+  const fields = 'media_url,media_type,permalink,id,caption,thumbnail_url'
   const url = `https://graph.instagram.com/me/media?fields=${fields}&access_token=${accessToken}`
   
   
@@ -19,23 +19,26 @@ export const apiInstagram = async () => {
   const data = receivedData.data
   if(data !== undefined) {
     const filterPosts = receivedData.data.filter((post:any, index: number) => {
-        if (post.media_type !== 'IMAGE') return false
-        return true
+        if (post.media_type === 'CAROUSEL_ALBUM') return true
+        if (post.media_type === 'IMAGE') return true
+        if (post.media_type === 'VIDEO') return true
+        return false
     })
     const lastSix = filterPosts?.filter((post:any, index: number) => {
         if(index <= 5) return true
         return false
     })
     if(lastSix !== undefined) {
-      const postData: IgPostProps = lastSix.map((post: IgPostProps) => {
+      const postData: IgPostProps = lastSix.map((post: IgPostAPIProps) => {
 
-        const newTitle = limitarString(post.caption, 30)
+        const newTitle = limitarString(post.caption, 35)
+        const url = post.media_type !== 'VIDEO' ? post.media_url : post.thumbnail_url
         const returnPost: IgPostProps = {
           id: post.id, 
           title: newTitle,
           description: 'Está é a descrição da proposta, post do Instagram ou vídeo.', 
           media_type: post.media_type,
-          media_url: post.media_url,
+          media_url: url,
           permalink: post.permalink,
           caption: post.caption
         }

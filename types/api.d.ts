@@ -6,6 +6,17 @@ export interface IgPostProps {
     media_url: string
     permalink: string
     caption: string
+
+}
+export interface IgPostAPIProps { 
+    id:string 
+    title?:string 
+    description?:string 
+    media_type: string
+    media_url: string
+    permalink: string
+    caption: string
+    thumbnail_url: string
 }
 
 export interface InstagramPageProps{
