@@ -17,18 +17,18 @@ export default function Sobre() {
             <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 rtl" data-aos="fade-up">
               <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg01} width={540} height={405} alt="Features 02" />
             </div>
-            <p className="text-xl text-gray-400">
+            <p className="text-xl text-gray-400 mt-8">
               Márcio Amazonas é procurador do Trabalho desde 2010, tendo oficiado no Amapá, na Bahia, no Distrito Federal e em Sergipe.
               Ele fez parte da administração superior da Procuradoria-Geral do Trabalho entre 2015 e 2021, como Secretário Jurídico e Secretário de Relações Institucionais, atuações que fizeram de Márcio o candidato mais votado na última eleição para PGT.
               Movido pelo desejo de fazer o Ministério Público do Trabalho avançar e pelo orgulho de ser MPT, Márcio é novamente candidato em 2023, com uma campanha propositiva e a defesa de um programa de gestão sólido intitulado de MPT+.
               Márcio acredita num MPT de todas e de todos, mais democrático, estruturado e forte, com foco nas ações finalísticas, capaz de projetar e engrandecer a instituição.
             </p>
             <div className="flex-row" data-aos="fade-up">
-            <div className="flex flex-wrap">
-            <div className="w-full md:w-1/2">
+            <div className="flex flex-wrap mt-8">
+            <div className="w-full md:w-1/2 pr-10">
             <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg02} width={width} height={height} alt="Features 02" />
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 pl-8">
           <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg03} width={width} height={height} alt="Features 02" />
           </div>
             </div>
