@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import MarcioImg01 from '@/public/images/marcio01.jpg'
-import MarcioImg02 from '@/public/images/marcio02.jpeg'
-import MarcioImg03 from '@/public/images/marcio03.jpeg'
+import MarcioImg01 from '@/public/images/sobre_1.jpg'
+import MarcioImg02 from '@/public/images/sobre_2.jpg'
+import MarcioImg03 from '@/public/images/sobre_3.jpg'
 
 export default function Sobre() {
   const width = 400
