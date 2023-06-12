@@ -25,10 +25,10 @@ export default function Sobre() {
             </p>
             <div className="flex-row" data-aos="fade-up">
             <div className="flex flex-wrap mt-8">
-            <div className="w-full md:w-1/2 pr-10">
+            <div className="w-full md:w-1/2 pr-6 mb-4 md: mb:0 pl-3">
             <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg02} width={width} height={height} alt="Features 02" />
-          </div>
-          <div className="w-full md:w-1/2 pl-8">
+            </div>
+          <div className="w-full md:w-1/2 pl-8 pr-12">
           <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg03} width={width} height={height} alt="Features 02" />
           </div>
             </div>
