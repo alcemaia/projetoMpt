@@ -9,6 +9,7 @@ import { apiInstagram } from '../services/getInstagramData';
 import { apiYouTube } from '../services/getYoutubeData';
 import Sobre from '@/components/sobre';
 
+
 export default function Home() {
   const [InstagramPosts, setInstagramPosts] = useState<any>([])
   const [YouTubePosts, setYouTubePost] = useState<any>([])
@@ -40,14 +41,6 @@ export default function Home() {
         <section key="propostas" id="propostas">
           <Zigzag />
         </section>
-        {InstagramPosts[0] !== undefined && (
-          <section key="Instagram" id="Instagram">
-            <Instagram 
-              title={'@marcio.amazonas'}
-              igPosts={InstagramPosts}
-              />
-          </section>
-        )}
         {
           YouTubePosts[0] !== undefined && 
             <section key="videos" id="videos">
@@ -57,6 +50,15 @@ export default function Home() {
               />
             </section>
         }
+        {
+          InstagramPosts[0] !== undefined && (
+          <section key="Instagram" id="Instagram">
+            <Instagram 
+              title={'@marcio.amazonas'}
+              igPosts={InstagramPosts}
+              />
+          </section>
+        )}
       </div> 
     </>
   )

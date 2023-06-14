@@ -49,13 +49,10 @@ export default function Footer() {
           </div>
           {/* Bottom area */}
           <div className="md:flex md:items-center md:justify-between">
-
             <ul className="flex mb-2 md:order-1 md:ml-4 md:mb-0">
             </ul>
             {/* Copyrights note */}
-            <div 
-            className="text-gray-400 text-sm mr-4">&copy; Márcio Amazonas. All rights reserved.</div>
-
+            <div className="text-gray-400 text-sm mr-4">&copy; Márcio Amazonas. All rights reserved.</div>
           </div>
 
         </div>

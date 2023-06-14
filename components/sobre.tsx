@@ -41,7 +41,7 @@ export default function Sobre() {
                 />
               </div>
             </div>
-            <p className="text-xl text-gray-400">
+            <p className="text-xl text-gray-400 mt-8">
               Márcio Amazonas é procurador do Trabalho desde 2010, tendo oficiado no Amapá, na Bahia, no Distrito Federal e em Sergipe.
               Ele fez parte da administração superior da Procuradoria-Geral do Trabalho entre 2015 e 2021, como Secretário Jurídico e Secretário de Relações Institucionais, atuações que fizeram de Márcio o candidato mais votado na última eleição para PGT.
               Movido pelo desejo de fazer o Ministério Público do Trabalho avançar e pelo orgulho de ser MPT, Márcio é novamente candidato em 2023, com uma campanha propositiva e a defesa de um programa de gestão sólido intitulado de MPT+.
@@ -49,6 +49,7 @@ export default function Sobre() {
             </p>
             <div className="flex-row" data-aos="fade-up">
             <div className="flex flex-wrap">
+
             </div>
           </div>
         </div>
