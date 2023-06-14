@@ -25,7 +25,7 @@ export default function Header() {
                   href="/#marcio"
                   className="font-bold text-custom-200 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  MARCIO
+                  MÁRCIO
                 </Link>
               </li>
               <li>

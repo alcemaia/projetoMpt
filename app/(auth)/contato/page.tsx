@@ -57,7 +57,7 @@ export default function SignIn() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
             <div className="max-w-3xl mx-auto text-center text-vermelho-900 pb-12 md:pb-20">
-              <h1 className="h1">Manifeste também o seu orgulho de ser MPT</h1>
+              <h1 className="h1">Manifeste também o seu orgulho de ser MPT!</h1>
             </div>
             <div className="max-w-sm mx-auto">
               <div className="flex items-center my-6">
@@ -68,19 +68,21 @@ export default function SignIn() {
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Nome</label>
+                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password"
+                    >Nome:</label>
                     <input 
                       onChange={handlerChange} 
                       id="subject" 
                       name="name" 
                       type="text" 
                       className="form-input w-full text-gray-300" 
-                      placeholder="Nome" required />
+                      placeholder="Nome:" required />
                   </div>
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">E-mail</label>
+                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email"
+                      >E-mail:</label>
                     <input
                       value={values.email}
                       onChange={handlerChange}
@@ -88,30 +90,32 @@ export default function SignIn() {
                       name="email" 
                       type="email" 
                       className="form-input w-full text-gray-300" 
-                      placeholder="seuemail@gmail.com" required />
+                      placeholder="E-mail:" required />
                   </div>
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Ação proposta</label>
+                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password"
+                      >Ação/proposta:</label>
                     <input 
                       onChange={handlerChange} 
                       id="subject" 
                       name="subject" 
                       type="text" 
                       className="form-input w-full text-gray-300" 
-                      placeholder="Digite aqui" required />
+                      placeholder="Ação/proposta:" required />
                   </div>
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Como você pode ter ainda mais orgulho de ser MPT</label>
+                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password"
+                      >Como você pode ter ainda mais orgulho de ser MPT?</label>
                       <textarea 
                         id="w3review" 
                         onChange={handlerChange} 
                         name="msg" 
                         className="form-input w-full text-gray-300" 
-                        placeholder="Digite aqui sua mensagem"
+                        placeholder="Como você pode ter ainda mais orgulho de ser MPT?"
                         rows={4} 
                         cols={50}
                       />

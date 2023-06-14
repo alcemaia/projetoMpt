@@ -63,7 +63,7 @@ export default function MobileMenu() {
           <li>
             <Link href="/#marcio" 
             className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-              MARCIO
+              MÁRCIO
             </Link>
           </li>
           <li>
