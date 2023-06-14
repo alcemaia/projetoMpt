@@ -1,21 +1,45 @@
 import Image from 'next/image'
 
-import MarcioImg01 from '@/public/images/marcio01.jpg'
-import MarcioImg02 from '@/public/images/marcio02.jpeg'
-import MarcioImg03 from '@/public/images/marcio03.jpeg'
+import MarcioImg01 from '@/public/images/m1.jpg'
+import MarcioImg02 from '@/public/images/m2.jpg'
+import MarcioImg03 from '@/public/images/m3.jpg'
+import ModalImage from './modal-img'
+
 
 export default function Sobre() {
-  const width = 400
-  const height = 200
+  const thumbWidth = 300
+  const imageWidth = 900
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20 border-t border-gray-800">
           <div className="max-w-3xl text-vermelho-900 mx-auto text-justify pb-14 md:pb-16">
             <h1 className="h2 mb-4">MÁRCIO AMAZONAS</h1>
-            
-            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 rtl" data-aos="fade-up">
-              <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg01} width={540} height={405} alt="Features 02" />
+            <div className="flex flex-row flex-warp mb-10 mt-10" data-aos="fade-up">
+              <div className="flex flex-warp flex-auto  bg-gray-100">
+                <ModalImage
+                  thumb={MarcioImg01}
+                  thumbWidth={thumbWidth}
+                  imageWidth={imageWidth}
+                  thumbAlt="Márcio Amazonas"
+                />
+              </div>
+              <div className="flex flex-warp flex-auto  bg-custom-100">
+                <ModalImage
+                  thumb={MarcioImg02}
+                  thumbWidth={thumbWidth}
+                  imageWidth={imageWidth}
+                  thumbAlt="Márcio Amazonas"
+                />
+              </div>
+              <div className="flex flex-warp flex-auto  bg-red">
+                <ModalImage
+                  thumb={MarcioImg03}
+                  thumbWidth={thumbWidth}
+                  imageWidth={imageWidth}
+                  thumbAlt="Márcio Amazonas"
+                />
+              </div>
             </div>
             <p className="text-xl text-gray-400">
               Márcio Amazonas é procurador do Trabalho desde 2010, tendo oficiado no Amapá, na Bahia, no Distrito Federal e em Sergipe.
@@ -25,12 +49,6 @@ export default function Sobre() {
             </p>
             <div className="flex-row" data-aos="fade-up">
             <div className="flex flex-wrap">
-            <div className="w-full md:w-1/2">
-            <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg02} width={width} height={height} alt="Features 02" />
-          </div>
-          <div className="w-full md:w-1/2">
-          <Image className="max-w-full mx-auto md:max-w-none h-auto" src={MarcioImg03} width={width} height={height} alt="Features 02" />
-          </div>
             </div>
           </div>
         </div>

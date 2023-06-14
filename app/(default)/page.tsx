@@ -52,7 +52,7 @@ export default function Home() {
           YouTubePosts[0] !== undefined && 
             <section key="videos" id="videos">
               <Videos
-                title={'MPT+  Programa de gestão'}
+                title={'MPT+ TV'}
                 ytPosts={YouTubePosts}
               />
             </section>
