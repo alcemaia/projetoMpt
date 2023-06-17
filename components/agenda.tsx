@@ -40,7 +40,7 @@ export default function Agenda() {
           </div>
 
           <div className="col">
-            {filteredAgenda.slice(Math.ceil(filteredAgenda.length / 2)).map((item, index) => (
+            {filteredAgenda.slice(Math.ceil((filteredAgenda.length / 2 - 0))).map((item, index) => (
               <p
                 key={item.day + item.mouth + item.place}
                 className={`text-sm mb-4 text-custom-200 ${index === filteredAgenda.length - 1 ? "text-center font-bold" : ""}`}
@@ -50,6 +50,9 @@ export default function Agenda() {
             ))}
           </div>
         </div>
+              <p key={'12121212'} className={`text-sm mb-4 text-custom-200 text-center font-bold`}>
+                {'20/07 - Debate'}
+              </p>
 
         <div className="flex-row" data-aos="fade-up">
           <div className="flex flex-wrap"></div>
