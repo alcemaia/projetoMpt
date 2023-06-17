@@ -38,7 +38,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/#Instagram"
+                  href="/#agenda"
                   className="font-bold text-custom-200 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   AGENDA

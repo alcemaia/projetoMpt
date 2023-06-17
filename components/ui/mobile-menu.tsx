@@ -73,7 +73,7 @@ export default function MobileMenu() {
             </Link>
           </li>
           <li>
-            <Link href="/#Instagram" 
+            <Link href="/#agenda" 
             className="flex font-medium w-full text-custom-200 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
             AGENDA
             </Link>
