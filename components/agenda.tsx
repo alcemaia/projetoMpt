@@ -32,7 +32,7 @@ export default function Agenda() {
             {filteredAgenda.slice(0, Math.ceil(filteredAgenda.length / 2)).map((item, index) => (
               <p
                 key={item.day + item.mouth + item.place}
-                className={`text-sm mb-4 text-custom-200 ${index === filteredAgenda.length - 1 ? "text-center font-bold" : ""}`}
+                className={`text-x text-gray-400 mt-4 font-bold`}
               >
                 {`${item.day}/${item.mouth}`} - {item.place}
               </p>
@@ -43,14 +43,14 @@ export default function Agenda() {
             {filteredAgenda.slice(Math.ceil((filteredAgenda.length / 2 - 0))).map((item, index) => (
               <p
                 key={item.day + item.mouth + item.place}
-                className={`text-sm mb-4 text-custom-200 ${index === filteredAgenda.length - 1 ? "text-center font-bold" : ""}`}
+                className={`text-x text-gray-400 mt-4 font-bold`}
               >
                 {`${item.day}/${item.mouth}`} - {item.place}
               </p>
             ))}
           </div>
         </div>
-              <p key={'12121212'} className={`text-sm mb-4 text-custom-200 text-center font-bold`}>
+              <p key={'debate'} className={`text-xl mb-4 text-custom-200 text-center font-bold`}>
                 {'20/07 - Debate'}
               </p>
 
