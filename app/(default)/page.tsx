@@ -8,6 +8,7 @@ import Zigzag from '@/components/zigzag'
 import { apiInstagram } from '../services/getInstagramData';
 import { apiYouTube } from '../services/getYoutubeData';
 import Sobre from '@/components/sobre';
+import Agenda from '@/components/agenda';
 
 
 export default function Home() {
@@ -37,6 +38,9 @@ export default function Home() {
           />
         <section key="marcio" id="marcio">
           <Sobre />
+        </section>
+        <section key="agenda" id="agenda">
+          <Agenda />
         </section>
         <section key="propostas" id="propostas">
           <Zigzag />

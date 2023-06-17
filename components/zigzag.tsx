@@ -16,7 +16,7 @@ const mockPropostas = [
       'Instituir o Colégio de PChefes como instância deliberativa;',
       'Criar o Colégio de Gestores com PChefes e coordenadores de PTM;',
       'Elevar o Colégio de Procuradores(as)-Chefes como instância deliberativa;',
-      'Criar o Colégio de Gestores com Procuradores(as)-Chefes e coordenadores de PTM;'
+      'Criar o Colégio de Gestores com Procuradores(as)-Chefes e coordenadores de PTM.'
     ], 
     title: 'MPT+ Democrático',
     img: FeatImage01,
@@ -34,7 +34,7 @@ const mockPropostas = [
       'Fortalecer a segurança institucional;',
       'Fortalecer as Tecnologias de Informação;',
       'Criar os Ofícios Digitais;',
-      'Desenvolver a Assistência Virtual para peças complexas;'
+      'Desenvolver a Assistência Virtual para peças complexas.'
     ], 
     //topTitle: 'Este é o complemento superior',
     title: 'MPT+ Estruturado',
@@ -50,7 +50,7 @@ const mockPropostas = [
       'Tornar o MPT mais transparente;',
       'Promover campanhas de mobilização social;',
       'Aproximar o MPT da sociedade;',
-      'Assegurar a estrutura física necessária às Regionais;'
+      'Assegurar a estrutura física necessária às Regionais.'
       ,
     ], 
    // topTitle: 'Este é o complemento superior',
