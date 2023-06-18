@@ -16,17 +16,20 @@ export async function GET(request: Request) {
     if(data.items !== undefined) {
       const dataArr = data.items
       const dataInResponsePattern = dataArr.map((itemVideo: any) => {
+        console.log(itemVideo)
         const data = itemVideo.snippet
         const videoId = data.resourceId
-        const thumbnails = data.thumbnails.standard.url
+        const thumbnails = data.thumbnails.medium.url !== undefined ? data.thumbnails.medium.url : data.thumbnails.standard.url
         const retorno = {
           title: data.title,
           description: data.description,
           video_url: `https://www.youtube.com/watch?v=${videoId.videoId}`,
           media_url: thumbnails,
         }
+        console.log(retorno)
         return retorno
       })
+      // console.log()
       responseHandler = dataInResponsePattern
     }
   }
