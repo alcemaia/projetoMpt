@@ -22,4 +22,5 @@ export const agendaData = [
   { day: '12', mouth: '07', place: 'Campo Grande-MS' },
   { day: '13', mouth: '07', place: 'Rio de Janeiro-RJ' },
   { day: '14', mouth: '07', place: 'Aracaju-SE' },
+  { day: '20', mouth: '07', place: 'Debate' },
 ]
